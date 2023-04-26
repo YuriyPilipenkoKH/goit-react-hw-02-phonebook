@@ -70,7 +70,7 @@ export const ContactFormBtn = styled.button`
   &:focus {
     outline:none;
     background-color: var(--green);
-    color: #fbf7f3;
+    color: var(--background-color);
     box-shadow: var(--shadow-two); 
   }
 `;

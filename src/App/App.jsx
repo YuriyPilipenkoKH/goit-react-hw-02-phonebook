@@ -6,8 +6,6 @@ import { Filter } from '../components/Filter/Filter';
 import { ContactList } from '../components/ContactList/ContactList';
 import Notiflix from 'notiflix';
 import { nanoid } from "nanoid";
-// import '../utils/checkForEmptyList'
-
 
 export class App extends Component {
   state = {
@@ -51,15 +49,6 @@ export class App extends Component {
     Notiflix.Notify.warning(`Contact deleted`);
   };
 
-  // checkForEmptyList =() => {
-  //   const field = document.querySelector('.filter__field')
-  //   console.log(field);
-
-  //   if(this.state.contacts.length === 0) {
-  //     field.disabled = true;
-  //   }
-
-  // }
 
   filterChange = e => {
     this.setState({ filter: e.currentTarget.value });
@@ -94,5 +83,3 @@ render() {
        )}   
 };
 
-// const myApp = new App()
-// myApp.checkForEmptyList()

@@ -18,20 +18,11 @@ export const List = styled.ul`
 
 export const ListItem = styled.li`
 
-
   display: flex;
   justify-content: space-between;
   align-items: baseline;
   padding: 8px 10px;  
   list-style-type: disc;
-
-
-  /* position: absolute;
-	height: 100vh;
-	width: 100%;
-	top: 0;
-	left: 0;
-	padding: 1rem; */
 `;
 
 export const ItemCard = styled.span`
@@ -45,7 +36,7 @@ export const ItemCard = styled.span`
   font-weight: 600;
   color: var(--footer-text-color);
   background-color: var(--lauren);
-  /* border: 3px solid var(--teal); */
+
   box-shadow: var(--shadow-four);    
 `
 
@@ -75,7 +66,7 @@ export const BtnDelete = styled.button`
   &:focus {
     outline:none;
     background-color: var(--green);
-    color: #fbf7f3;
+    color: var(--background-color);
     box-shadow: var(--shadow-two); 
 
     .cardSpan{
