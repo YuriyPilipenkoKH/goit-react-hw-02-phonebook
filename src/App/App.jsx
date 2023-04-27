@@ -38,15 +38,14 @@ export class App extends Component {
       contacts: [newContact, ...contacts],
     }));
     Notiflix.Notify.success(`${newContact.name}  added`);
-    // console.log(newContact);
-    // console.log(this.state.contacts);
+
   };
 
   deleteContact = (contactId, contactName) => {
     this.setState(prevState => ({
       contacts: prevState.contacts.filter(contact => contact.id !== contactId),
     }));
-    console.log(contactId);
+   
     Notiflix.Notify.warning(`${contactName} deleted`);
   };
 

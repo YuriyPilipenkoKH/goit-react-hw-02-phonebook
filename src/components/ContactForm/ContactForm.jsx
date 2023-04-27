@@ -47,7 +47,7 @@ import {Input,Form,Label, ContactFormBtn} from './ContactForm.styled';
                 onChange={this.handleChange}
               />
             </Label>
-            <Label>
+            <Label> 
               Number:
               <Input
                 type="tel"

@@ -19,18 +19,23 @@ export const List = styled.ul`
 export const ListItem = styled.li`
 
   display: flex;
-  justify-content: space-between;
-  align-items: baseline;
+  flex-direction: column;
+  gap: 8px;
+  
+  align-items: center;
   padding: 8px 10px;  
   list-style-type: disc;
+
+  @media screen and (min-width: 768px) {
+   flex-direction: row;
+   justify-content: space-between;
+    }
 `;
 
 export const ItemCard = styled.span`
   display: flex;
   align-items: center;
-  
-
-  height: 40px;
+ min-height: 40px;
   border-radius: 10px;
   padding:4px 16px;
   font-weight: 600;
@@ -42,9 +47,9 @@ export const ItemCard = styled.span`
 
 export const ContactContainer = styled.div`
   position: relative;
-  width: 550px;
+  width: 320px;
   max-height: 280px;
-  padding: 4px 20px;
+  padding: 4px 2px;
   border: 3px solid var(--teal);
   border-radius: 10px;
   box-shadow: var(--shadow-four);
@@ -53,6 +58,11 @@ export const ContactContainer = styled.div`
   ::-webkit-scrollbar {
     display: none;
 }
+
+@media screen and (min-width: 768px) {
+      width: 550px;
+      padding: 4px 8px;
+    }
 `;
 
 export const BtnDelete = styled.button`
