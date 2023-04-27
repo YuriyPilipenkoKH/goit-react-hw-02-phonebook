@@ -60,7 +60,7 @@ export const ContactContainer = styled.div`
 }
 
 @media screen and (min-width: 768px) {
-      width: 550px;
+      width: 500px;
       padding: 4px 8px;
       max-height: 280px;
     }
