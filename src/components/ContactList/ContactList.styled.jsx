@@ -48,7 +48,7 @@ export const ItemCard = styled.span`
 export const ContactContainer = styled.div`
   position: relative;
   width: 320px;
-  max-height: 280px;
+  max-height: 480px;
   padding: 4px 2px;
   border: 3px solid var(--teal);
   border-radius: 10px;
@@ -62,6 +62,7 @@ export const ContactContainer = styled.div`
 @media screen and (min-width: 768px) {
       width: 550px;
       padding: 4px 8px;
+      max-height: 280px;
     }
 `;
 
