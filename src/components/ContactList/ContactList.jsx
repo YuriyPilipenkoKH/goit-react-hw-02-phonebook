@@ -18,7 +18,7 @@ export const ContactList = ({ options, onDeleteContact }) => {
            
             <BtnDelete 
             type="button" 
-            onClick={() => onDeleteContact(contact.id)}>
+            onClick={() => onDeleteContact(contact.id, contact.name)}>
               Delete
             </BtnDelete>
           </ListItem>

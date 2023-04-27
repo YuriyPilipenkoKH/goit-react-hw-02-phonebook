@@ -69,4 +69,5 @@ import {Input,Form,Label, ContactFormBtn} from './ContactForm.styled';
 
   ContactForm.propTypes = {
     onSubmit: PropTypes.func.isRequired,
+    onChange: PropTypes.func,
 }

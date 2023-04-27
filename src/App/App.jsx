@@ -37,16 +37,17 @@ export class App extends Component {
     this.setState(({ contacts }) => ({
       contacts: [newContact, ...contacts],
     }));
-    Notiflix.Notify.success(`Contact added`);
+    Notiflix.Notify.success(`${newContact.name}  added`);
     // console.log(newContact);
     // console.log(this.state.contacts);
   };
 
-  deleteContact = contactId => {
+  deleteContact = (contactId, contactName) => {
     this.setState(prevState => ({
       contacts: prevState.contacts.filter(contact => contact.id !== contactId),
     }));
-    Notiflix.Notify.warning(`Contact deleted`);
+    console.log(contactId);
+    Notiflix.Notify.warning(`${contactName} deleted`);
   };
 
 
