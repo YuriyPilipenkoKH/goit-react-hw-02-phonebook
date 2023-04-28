@@ -13,7 +13,7 @@ const ulAnimation = keyframes`
     }
 
 `
-
+   
 
 export const List = styled.ul`
   display: flex;
@@ -27,7 +27,7 @@ export const List = styled.ul`
   margin: 0;
   padding: 0;
  
-  animation: ${ulAnimation} 1s ease-in;  
+   animation: ${ulAnimation} 1s ease;   
 `;
 
 export const ListItem = styled.li`
@@ -39,6 +39,8 @@ export const ListItem = styled.li`
   align-items: center;
   padding: 8px 10px;  
   list-style-type: disc;
+
+
 
   @media screen and (min-width: 768px) {
    flex-direction: row;
