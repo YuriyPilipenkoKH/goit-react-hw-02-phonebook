@@ -1,7 +1,8 @@
 import { Input ,  Label} from '../ContactForm/ContactForm.styled';
 import { PropTypes } from 'prop-types';
 
-export const Filter = ({ value, onFilterChange }) => (
+export const Filter = ({ value, onFilterChange, dis }) => (
+ 
   <>
     <Label>
       Find contacts by name
@@ -10,6 +11,7 @@ export const Filter = ({ value, onFilterChange }) => (
         type="text"
         value={value}
         onChange={onFilterChange}
+        disabled={dis}
         // placeholder="Name or phone to seach..."
       />
     </Label>

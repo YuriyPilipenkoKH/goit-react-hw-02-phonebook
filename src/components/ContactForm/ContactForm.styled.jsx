@@ -38,6 +38,17 @@ export const Input = styled.input`
     outline: 2px solid var(--orange);
     box-shadow: var(--shadow-two);
   }
+
+  &:disabled {
+    border: none;
+    outline: none;
+    cursor: none;
+    background-color: var(--lightslategray);
+
+    &:hover {
+      box-shadow: var(--shadow-four);
+    }
+  }
 `;
 
 export const Form = styled.form`

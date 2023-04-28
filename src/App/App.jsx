@@ -70,7 +70,11 @@ render() {
    </Section>
 
    <Section title = "Contacts"> 
-   <Filter value={filter} onFilterChange={this.filterChange} />
+   <Filter 
+   value={filter}
+    onFilterChange={this.filterChange} 
+    dis = {this.state.contacts.length === 0 }
+    />
    {this.state.contacts.length > 0  &&
         <ContactList
         options={filteredContacts}
