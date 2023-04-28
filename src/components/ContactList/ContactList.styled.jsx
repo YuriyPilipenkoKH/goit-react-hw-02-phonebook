@@ -1,5 +1,19 @@
-import styled from 'styled-components';
+import styled, {  keyframes } from 'styled-components';
 import baseLiStyles from '../ContactForm/ContactForm.styled';
+
+const ulAnimation = keyframes`
+    0% {
+        transform: rotateX(-90deg)
+    }
+    70% {
+        transform: rotateX(20deg) 
+    }
+    100% {
+        transform: rotateX(0deg) 
+    }
+
+`
+
 
 export const List = styled.ul`
   display: flex;
@@ -13,7 +27,7 @@ export const List = styled.ul`
   margin: 0;
   padding: 0;
  
-
+  animation: ${ulAnimation} 1s ease-in;  
 `;
 
 export const ListItem = styled.li`
