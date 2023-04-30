@@ -1,4 +1,4 @@
-import styled, {  keyframes } from 'styled-components';
+import styled, { css, keyframes } from 'styled-components';
 import baseLiStyles from '../ContactForm/ContactForm.styled';
 
 const ulAnimation = keyframes`
@@ -13,6 +13,34 @@ const ulAnimation = keyframes`
     }
 
 `
+// Set delay per List Item
+// @for $i from 1 through $total-items {
+//   li:nth-child(#{$i}) {
+//     animation-delay: .25s * $i;
+//   }
+// }
+
+
+
+// const StyledComponent = styled.div`
+ 
+// `;
+
+// Keyframe animation
+// const fadeIn = keyframes`
+  
+//   0% {
+//     opacity: 0;
+//     top: 100px;
+//   }
+//   75% {
+//     opacity: 0.5;
+//     top: 0px;
+//   }
+//   100% {
+//     opacity: 1;
+//   }
+// ` 
    
 
 export const List = styled.ul`
@@ -26,11 +54,27 @@ export const List = styled.ul`
   font-weight: 500;
   margin: 0;
   padding: 0;
- 
+
    animation: ${ulAnimation} 1s ease;   
 `;
 
 export const ListItem = styled.li`
+
+
+    /* set up the animation */
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+  
+    
+    /* use a css helper function to generate the delay */
+    ${({ totalItems }) => css`
+      ${Array.from({ length: totalItems }, (_, i) => css`
+        &:nth-child(${i + 1}) {
+          animation-delay: ${0.25 * (i + 1)}s;
+        }
+      `)}
+    `}
+
 
   display: flex;
   flex-direction: column;
@@ -38,9 +82,6 @@ export const ListItem = styled.li`
   
   align-items: center;
   padding: 8px 10px;  
-  list-style-type: disc;
-
-
 
   @media screen and (min-width: 768px) {
    flex-direction: row;
