@@ -5,7 +5,9 @@ export const Filter = ({ value, onFilterChange, dis }) => (
  
   <>
     <Label>
-      Find contacts by name
+      {dis 
+      ? 'List is empty . . .'
+      : 'Find contacts by name'}
       <Input
         className='filter__field'
         type="text"
